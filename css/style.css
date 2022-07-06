@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game {
+    width: 100%;
+    height: 100vh;
+    border-bottom: 100px solid rgb(24, 174, 24);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87ceeb, #e0f6ff);    
+}
+
+.pipe-game {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+    display: none;
+}
+
+.super-mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    display: none;
+    animation: move 5s linear forwards;
+}
+
+.cloud-game {
+    position: absolute;
+    width: 550px;
+    animation: clouds-animation 20s infinite linear;
+}
+
+.logo {
+    position: absolute;
+    width: 500px;
+    top: 250px;
+    left: 670px;
+}
+
+.jump-mario {
+    animation: mario-animation 250ms ease-out;
+}
+
+.start {
+    position: absolute;
+    width: 250px;
+    top: 480px;
+    left: 800px;
+}
+
+.game-over {
+    position: absolute;
+    width: 420px;
+    top: 170px;
+    left: 740px;
+    display: none;
+}
+
+.coopa-game {
+    position: absolute;
+    width: 400px;
+    animation: float 6s alternate infinite;
+    display: none;
+}
+
+
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes mario-animation {
+    0% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 180px;
+    }
+    50% {
+        bottom: 180px;
+    }
+    60% {
+        bottom: 180px;
+    }
+    70% {
+        bottom: 180px;
+    }
+    100% {bottom: 0%;}
+}
+
+@keyframes float{
+	0%{
+        top: -10px;
+        left: -10px;
+		transform:translate(0, 0)
+	}
+	50%{
+        top: 50%; 
+        left: 50%;
+		transform:translatey(-50%, 50%)       
+	}100% { 
+        top: 100%; 
+        left: 100%; 
+        transform: translate(100%, -100%) 
+    }
+}
+
+
+
+
+
+
+
